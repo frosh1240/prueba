@@ -1,0 +1,23 @@
+<div class="title">
+    <div class="">
+        <h1>REVIEWS</h1>
+    </div>
+</div>
+<div id="content-tags">
+    <article id="content-article" *ngFor='let lists of list'>
+        <div class="img-article">
+            <img [src]="lists.multimedia.src" alt="" routerLink="../details/" routerLinkActive="active">
+        </div>
+        <div class="content-body">
+            <div class="content-title">
+                <p>{{ lists.display_title}}</p>
+            </div>
+            <div class="content-text">
+                <p>{{ lists.summary_short }}</p>
+            </div>
+            <div class="content-footer">
+                <p>Publication date <br> {{ lists.publication_date }}</p>
+            </div>
+        </div>
+    </article>
+</div>
